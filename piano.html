@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Piano</title>
+    <!-- <link rel="stylesheet" href="pia.css"> -->
+    <style>
+         
+
+body{
+    color: rgb(57, 72, 100);
+    
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    /* background-image: radial-gradient(rgb(255, 255, 255),rgb(0, 0, 0)); */
+    background-image: url(pexels-picjumbocom-196652.jpg);
+    background-repeat: repeat;
+    background-size:cover ;
+    background-attachment: fixed;
+    /* justify-content: center; */
+    
+    margin: 15%;
+    margin-left: 30%;
+    
+}
+   
+
+.piano{
+    display: flex;
+     position: relative; 
+    margin-left: 4px;
+    box-shadow: rgb(124, 103, 103) 0 0 200px ;
+}
+
+.White-key{
+    width:40px;
+    height: 120px;
+    background-color: azure;
+    border: 4px solid;
+    border-radius:0 0 6px 6px;
+    cursor: pointer;
+    margin-left: -4px; 
+    outline: none;
+}
+
+.black-key{
+    position: absolute;
+    width: 24px;
+    height: 80px;
+    background-image: linear-gradient(black,#303030);
+    border: solid;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: rgb(83, 80, 80) 6px 2px 2px;
+}
+
+.Db4{
+    left: 22px;
+}
+
+.Eb4{
+    left: 58px;
+}
+
+.Gb4{
+    left: 130px;
+}
+
+.Ab4{
+    left: 166px;
+}
+
+.Bb4{
+    left: 202px;
+}
+
+.Db5{
+    left: 274px;
+}
+
+.Eb5{
+    left: 310px;
+}
+
+
+.back{
+    padding-top: 0px;
+    width: 360px;
+    height: 120px;
+     background-color: rgb(43, 40, 40); 
+    
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 8px;
+    border-radius: 0 0 50px 50px;
+}
+.bu{
+    text-align: center;
+    margin-top: 4%;
+    cursor: pointer;
+    
+}
+
+    </style>
+</head>
+<body>
+<div class="x">
+     <div ><img style="margin-bottom: -8px; border-radius: 50px 50px 0 0;" src="71rvYIL0-EL._AC_SL1500_.jpg" alt="" width="560px" height="120px"> </div>    
+     <div class="back" >
+    <div class="piano">
+     
+        <button id="one" class="White-key c4" onclick="getc4()" ></button>
+        <button id="two" class="black-key Db4" onclick="getDb4()"></button>
+        <button id="one1" class="White-key d4" onclick="getd4()"></button>
+        <button id="two1" class="black-key Eb4" onclick="getEb4()"></button>
+        <button id="one2" class="White-key e4" onclick="gete4()"></button>
+        <button id="one3" class="White-key f4" onclick="getf4()"></button>
+        <button id="two2" class="black-key Gb4" onclick="getGb4()"></button>
+        <button id="one4" class="White-key g4" onclick="getg4()"></button>
+        <button id="two3" class="black-key Ab4" onclick="getAb4()"></button>
+        <button id="one5" class="White-key a4" onclick="geta4()"></button>
+        <button id="two4" class="black-key Bb4" onclick="getBb4()"></button>
+        <button id="one6" class="White-key b4" onclick="getb4()"></button>
+        <button id="one7" class="White-key c5" onclick="getc5()"></button>
+        <button id="two5" class="black-key Db5" onclick="getDb5()"></button>
+        <button id="one8" class="White-key d5" onclick="getd5()"></button>
+        <button id="two6" class="black-key Eb5" onclick="getEb5()"></button>
+        <button id="one9" class="White-key e5" onclick="gete5()"></button>
+         <audio id = "a"src="562758__ion__c4.mp3"></audio>
+         <audio id = "b"src="203481__tesabob2001__c-4.mp3"></audio>
+         <audio id = "c"src="203472__tesabob2001__d4.mp3"></audio>
+         <audio id = "d"src="203482__tesabob2001__d-4.mp3"></audio>
+         <audio id = "e"src="203471__tesabob2001__e4.mp3"></audio>
+         <audio id = "f"src="334541__teddy-frost__f4.wav"></audio>
+         <audio id = "g"src="203500__tesabob2001__f-4.mp3"></audio>
+         <audio id = "h"src="203492__tesabob2001__g4.mp3"></audio>
+         <audio id = "i"src="203491__tesabob2001__g-4.mp3"></audio>
+         <audio id = "j"src="203465__tesabob2001__a4.mp3"></audio>
+         <audio id = "k"src="203460__tesabob2001__a-4.mp3"></audio>
+         <audio id = "l"src="203462__tesabob2001__b4.mp3"></audio>
+         <audio id = "m"src="203485__tesabob2001__c5.mp3"></audio>
+         <audio id = "n"src="203480__tesabob2001__c-5.mp3"></audio>
+         <audio id = "o"src="203473__tesabob2001__d5.mp3"></audio>
+         <audio id = "p"src="203487__tesabob2001__d-5.mp3"></audio>
+         <audio id = "q"src="203476__tesabob2001__e5.mp3"></audio>
+
+        
+     </div>
+     <div class = "bu"><button style="background-color: rgb(208, 255, 0); height: 50px;width: 150px; color: rgb(0, 0, 0);" onclick="changecolor()"><h3><b>Change the color</b></h3></button></div>
+    </div>
+
+  
+
+</div>
+    <script>
+        var a = document.getElementById("a")
+        function getc4(){
+             
+             a.play(); 
+             
+        }
+        var b = document.getElementById("b")
+        function getDb4(){
+             b.play();   
+        }
+        var c = document.getElementById("c")
+        function getd4(){
+             c.play();   
+        }
+        var d = document.getElementById("d")
+        function getEb4(){
+             d.play();   
+        }
+        var e = document.getElementById("e")
+        function gete4(){
+             e.play();   
+        }
+        var f = document.getElementById("f")
+        function getf4(){
+             f.play();   
+        }
+        var g = document.getElementById("g")
+        function getGb4(){
+             g.play();   
+        }
+        var h = document.getElementById("h")
+        function getg4(){
+             h.play();   
+        }
+        var i = document.getElementById("i")
+        function getAb4(){
+             i.play();   
+        }
+        var j = document.getElementById("j")
+        function geta4(){
+             j.play();   
+        }
+        var k = document.getElementById("k")
+        function getBb4(){
+             k.play();   
+        }
+
+        var l = document.getElementById("l")
+        function getb4(){
+             l.play();   
+        }
+        var m = document.getElementById("m")
+        function getc5(){
+             m.play();   
+        }
+        var n = document.getElementById("n")
+        function getDb5(){
+             n.play();   
+        }
+        var o = document.getElementById("o")
+        function getd5(){
+             o.play();   
+        }
+        var p = document.getElementById("p")
+        function getEb5(){
+             p.play();   
+        }
+        var q = document.getElementById("q")
+        function gete5(){
+             q.play();   
+        }
+        
+        
+        
+        function changecolor(){
+             Math.floor> 200;
+        var r = Math.floor(Math.random()*300);
+        var g = Math.floor(Math.random()*256);
+        var b = Math.floor(Math.random()*256);
+
+        var r1 = Math.floor(Math.random()*256);
+        var g1 = Math.floor(Math.random()*256);
+        var b1 = Math.floor(Math.random()*256);
+        
+        var r2 = Math.floor(Math.random()*256);
+        var g2 = Math.floor(Math.random()*256);
+        var b2 = Math.floor(Math.random()*256);
+
+        var r3 = Math.floor(Math.random()*256);
+        var g3 = Math.floor(Math.random()*256);
+        var b3 = Math.floor(Math.random()*256);
+
+        var r4 = Math.floor(Math.random()*256);
+        var g4 = Math.floor(Math.random()*256);
+        var b4 = Math.floor(Math.random()*256);
+
+        var r5 = Math.floor(Math.random()*256);
+        var g5 = Math.floor(Math.random()*256);
+        var b5 = Math.floor(Math.random()*256);
+
+        var r6 = Math.floor(Math.random()*256);
+        var g6 = Math.floor(Math.random()*256);
+        var b6 = Math.floor(Math.random()*256);
+
+        var r7 = Math.floor(Math.random()*256);
+        var g7 = Math.floor(Math.random()*256);
+        var b7 = Math.floor(Math.random()*256);
+
+        var r8 = Math.floor(Math.random()*256);
+        var g8 = Math.floor(Math.random()*256);
+        var b8 = Math.floor(Math.random()*256);
+
+        var r9 = Math.floor(Math.random()*256);
+        var g9 = Math.floor(Math.random()*256);
+        var b9 = Math.floor(Math.random()*256);
+
+        var mycolor1 = "rgb("+ r + "," + g + ","+ b + ")";
+        var mycolor2 = "rgb("+ r1 + "," + g1 + ","+ b1 + ")";
+        var mycolor3 = "rgb("+ r2 + "," + g2+ ","+ b2 + ")";
+        var mycolor4 = "rgb("+ r3 + "," + g3 + ","+ b3 + ")";
+        var mycolor5 = "rgb("+ r4 + "," + g4 + ","+ b4 + ")";
+        var mycolor6 = "rgb("+ r5 + "," + g5 + ","+ b5 + ")";
+        var mycolor7 = "rgb("+ r6 + "," + g6 + ","+ b6 + ")";
+        var mycolor8 = "rgb("+ r7 + "," + g7 + ","+ b7 + ")";
+        var mycolor9 = "rgb("+ r8 + "," + g8 + ","+ b8 + ")";
+        var mycolor10 = "rgb("+ r9 + "," + g9 + ","+ b9 + ")";
+        
+     //    var mycolor2 = "rgb("+ r + "," + g + ","+ b + ")";
+        document.getElementById("one").style.background = mycolor1;
+        document.getElementById("one1").style.background = mycolor2;
+        document.getElementById("one2").style.background = mycolor3;
+        document.getElementById("one3").style.background = mycolor4;
+        document.getElementById("one4").style.background = mycolor5;
+        document.getElementById("one5").style.background = mycolor6;
+        document.getElementById("one6").style.background = mycolor7;
+        document.getElementById("one7").style.background = mycolor8;
+        document.getElementById("one8").style.background = mycolor9;
+        document.getElementById("one9").style.background = mycolor10;
+        
+        
+        
+        }
+        
+     </script>
+
+    
+          
+
+</body>
+</html>
+
+
